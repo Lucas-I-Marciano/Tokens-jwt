@@ -20,8 +20,8 @@ class User {
       console.log(Buffer.from(this.bufferHash, "hex"));
       // To compare two buffers, I need timingSafeEqual() method
 
-      // bufferHashTest === this.bufferHash // false
-      // timingSafeEqual(bufferHashTest, Buffer.from(this.bufferHash, "hex") // true
+      // bufferHashTest == this.bufferHash --> false
+      // timingSafeEqual(bufferHashTest, Buffer.from(this.bufferHash, "hex") --> true
       if (timingSafeEqual(bufferHashTest, this.bufferHash)) {
         return true;
       }
